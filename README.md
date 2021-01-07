@@ -1,12 +1,12 @@
 # Spring_ToyProject
 
-##Spring 프레임워크.
+## Spring 프레임워크.
 
-##DI(Dependency Injection) 컨테이너 제공 -> 쉽게 부품을 교체하듯이 개발 가능.
+## DI(Dependency Injection) 컨테이너 제공 -> 쉽게 부품을 교체하듯이 개발 가능.
 
 역활과 구현을 분리하자!!  모든 설계에 Interface 부여.
 
-##SOLID 생각하면서 설계 
+## SOLID 생각하면서 설계 
 (좋은 객체지향 5가지 원칙)
 
 >S : SRP(Single Responsibility Priciple) -> 한 클래스는 하나의 책임.   
