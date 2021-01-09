@@ -10,7 +10,7 @@
 (좋은 객체지향 5가지 원칙)
 
 >S : SRP(Single Responsibility Priciple) -> 한 클래스는 하나의 책임.   
->    클라이언트 객체는 실행하는 책임만 담당.
+>    클라이언트 객체는 실행하는 책임만 담당.   
 >O : OCP(Open Closed Principle) -> 확장에는 열려있으나 변경에는 닫현있는 원칙.   
 >L : LSP(Liskov Substituition Principle) ->   인터페이스 => 구현체.   
 >I : ISP(Interface Segregation Principle) -> 특정 클라이언트를 위한 인터페이스 구현.   
