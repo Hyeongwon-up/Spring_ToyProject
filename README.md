@@ -10,14 +10,16 @@
 (좋은 객체지향 5가지 원칙)
 
 >S : SRP(Single Responsibility Priciple) -> 한 클래스는 하나의 책임.   
+>    클라이언트 객체는 실행하는 책임만 담당.
 >O : OCP(Open Closed Principle) -> 확장에는 열려있으나 변경에는 닫현있는 원칙.   
 >L : LSP(Liskov Substituition Principle) ->   인터페이스 => 구현체.   
 >I : ISP(Interface Segregation Principle) -> 특정 클라이언트를 위한 인터페이스 구현.   
->D : DIP(Dependency Inversion Principle) -> 추상화에 의존한다. 구체화에 의존 x.   
+>D : DIP(Dependency Inversion Principle) -> 추상화에 의존한다. 구체화에 의존 x.  
 
+ 
 
 ****
-#### 1/9
+### 1/9
 할인 정책 변경.
 
 문제점
@@ -29,4 +31,10 @@
 AppConfig 생성 - 애플리케이션의 전체 동작방식 구성하기 위해, 구현 객체를 생성하고, 연결하는 별도의 설정 클래스 생성.   
 + 역활과 구현 클래스가 한눈에 들어오도록. -> 빠르게 파악가능.
 
+
 ***
+
+### 1/10
+
+
+
