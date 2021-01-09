@@ -40,6 +40,8 @@ AppConfig 생성 - 애플리케이션의 전체 동작방식 구성하기 위해
   AppConfig는 OrderServiceImpl이 아닌 OrderService 인터페이스의 다른 구현 객체를 생성하고 실행할수 있다.    
   그런 사실도 모른채 OrderServiceImpl은 묵묵히 자신의 로직 실행   
   => 프로그램의 제어 흐름을 직접 제어하는것이 아니라 외부에서 관리하는 것을 제어의 역전(IoC)라 한다.
+  
+ ***
 
 
 
