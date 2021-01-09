@@ -9,8 +9,7 @@
 ## SOLID 생각하면서 설계 
 (좋은 객체지향 5가지 원칙)
 
->S : SRP(Single Responsibility Priciple) -> 한 클래스는 하나의 책임.   
->    클라이언트 객체는 실행하는 책임만 담당.   
+>S : SRP(Single Responsibility Priciple) -> 한 클래스는 하나의 책임.클라이언트 객체는 실행하는 책임만 담당.   
 >O : OCP(Open Closed Principle) -> 확장에는 열려있으나 변경에는 닫현있는 원칙.   
 >L : LSP(Liskov Substituition Principle) ->   인터페이스 => 구현체.   
 >I : ISP(Interface Segregation Principle) -> 특정 클라이언트를 위한 인터페이스 구현.   
@@ -35,6 +34,12 @@ AppConfig 생성 - 애플리케이션의 전체 동작방식 구성하기 위해
 ***
 
 ### 1/10
+
+####IoC(Inversion of Control) 제어의 역전  
++ 프로그램에 대한 제어 흐름에 대한 권한은 모두 AppConfig가 가지고 있다.   
+  AppConfig는 OrderServiceImpl이 아닌 OrderService 인터페이스의 다른 구현 객체를 생성하고 실행할수 있다.    
+  그런 사실도 모른채 OrderServiceImpl은 묵묵히 자신의 로직 실행   
+  => 프로그램의 제어 흐름을 직접 제어하는것이 아니라 외부에서 관리하는 것을 제어의 역전(IoC)라 한다.
 
 
 
