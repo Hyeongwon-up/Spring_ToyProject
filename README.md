@@ -103,6 +103,60 @@ AppConfig 생성 - 애플리케이션의 전체 동작방식 구성하기 위해
 + 스프링 Security, Data JPA 등의 스프링 프레임워크 요소를 쉽게 사용 할 수있음.
 
 
+#### AOP ( Asepect Oriented Programming) - 공통관심사항 vs 핵심관심사항 분리! 
+
+### AOP가 필요한 상황!
+
++ 모든 메소드의 호출시간 측정.
++ 공통 관심사항 ( Cross-cutting concern) vs 핵심 관심 사항( Core concern)
++ 회원가입시간, 회원조회 시간 측정 하고싶을떄?
+
+#### BUT
+
++ 시간 측정 하는 기능은 핵심 관심사항이 아니다! -> 공통 관심 사항이다.
++ 시간을 측정하는 로직과 비즈니스의 로직이 섞이면 유지보수 어려움
+
+
+
+```JAVA
+package Hyeongwon.Spring_Practice.aop;
+
+
+import org.aspectj.lang.ProceedingJoinPoint;
+import org.aspectj.lang.annotation.Around;
+import org.aspectj.lang.annotation.Aspect;
+import org.springframework.stereotype.Component;
+
+@Aspect
+@Component
+public class TimeTraceAop {
+
+    @Around("execution(* Hyeongwon.Spring_Practice..*(..)) ")
+    public Object execute(ProceedingJoinPoint joinPoint) throws Throwable {
+        long start = System.currentTimeMillis();
+        System.out.println("START : " + joinPoint.toLongString());
+
+        try {
+
+
+            Object result = joinPoint.proceed();
+            return result;
+
+        } finally {
+            long finish = System.currentTimeMillis();
+            long timeMs = finish-start;
+            System.out.println("End: " + joinPoint.toLongString() + " " + timeMs + "ms");
+        }
+    }
+}
+
+```
+
+
+
+
+
+
 ***
 
 
