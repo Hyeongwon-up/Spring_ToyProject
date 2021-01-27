@@ -1,4 +1,13 @@
 # Spring_ToyProject
+***
+### 라이브러리
+- [JUnit📄](https://junit.org/junit5/docs/current/user-guide/#writing-tests-annotations)
+
+
+
+
+
+***
 
 ## Spring 프레임워크.
 
@@ -79,10 +88,92 @@
 
 + 단순한 자바 코드를 호출한 것 같지만. 아니다. "싱글톤 컨테이너" gogo.
 
+<<<<<<< HEAD
 ####
+=======
+
+>>>>>>> origin/master
 
 ***
 
+### 1/13
+
+#### 테스트
+
++ 통합테스트 : 스프링 컨테이너 포함
++ 유닛테스트 : 단위 쪼개서 ( 스프링 컨테이너 포함하지 않고) 
++ 유닛테스트에 더 익숙해져야한다.!!!
+
+***
+
+### 1/16
+
+#### 스프링부트 장점
+
++ 간편한 설정
++ 편리한 의존성 관리 & 자동 권장 버전 관리
++ 내장서버로 인한 간단한 배포 서버 구축
++ 스프링 Security, Data JPA 등의 스프링 프레임워크 요소를 쉽게 사용 할 수있음.
+
+
+#### AOP ( Asepect Oriented Programming) - 공통관심사항 vs 핵심관심사항 분리! 
+
+### AOP가 필요한 상황!
+
++ 모든 메소드의 호출시간 측정.
++ 공통 관심사항 ( Cross-cutting concern) vs 핵심 관심 사항( Core concern)
++ 회원가입시간, 회원조회 시간 측정 하고싶을떄?
+
+#### BUT
+
++ 시간 측정 하는 기능은 핵심 관심사항이 아니다! -> 공통 관심 사항이다.
++ 시간을 측정하는 로직과 비즈니스의 로직이 섞이면 유지보수 어려움
+
+
+
+```JAVA
+package Hyeongwon.Spring_Practice.aop;
+
+
+import org.aspectj.lang.ProceedingJoinPoint;
+import org.aspectj.lang.annotation.Around;
+import org.aspectj.lang.annotation.Aspect;
+import org.springframework.stereotype.Component;
+
+@Aspect
+@Component
+public class TimeTraceAop {
+
+    @Around("execution(* Hyeongwon.Spring_Practice..*(..)) ")
+    public Object execute(ProceedingJoinPoint joinPoint) throws Throwable {
+        long start = System.currentTimeMillis();
+        System.out.println("START : " + joinPoint.toLongString());
+
+        try {
+
+
+            Object result = joinPoint.proceed();
+            return result;
+
+        } finally {
+            long finish = System.currentTimeMillis();
+            long timeMs = finish-start;
+            System.out.println("End: " + joinPoint.toLongString() + " " + timeMs + "ms");
+        }
+    }
+}
+
+```
+
+
+
+
+
+
+
+
+
+***
 
 
 
