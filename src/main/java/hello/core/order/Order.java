@@ -1,7 +1,5 @@
 package hello.core.order;
 
-import org.w3c.dom.ls.LSOutput;
-
 public class Order {
 
     private Long memberId;
@@ -61,11 +59,6 @@ public class Order {
                 ", discountPrice=" + discountPrice +
                 '}';
     }
-
-
-
-
-
 
 
 }

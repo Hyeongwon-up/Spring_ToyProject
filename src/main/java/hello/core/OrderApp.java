@@ -1,8 +1,8 @@
 package hello.core;
 
 import hello.core.Member.Grade;
-import hello.core.Member.Member;
-import hello.core.Member.MemberService;
+
+
 import hello.core.Member.MemberServiceImpl;
 import hello.core.order.Order;
 import hello.core.order.OrderService;
@@ -15,9 +15,9 @@ public class OrderApp {
     public static void main(String[] args) {
 
 
-  //      AppConfig appConfig = new AppConfig();
-  //      MemberService memberService = appConfig.memberService();
-  //      OrderService orderService = appConfig.orderService();
+        //      AppConfig appConfig = new AppConfig();
+        //      MemberService memberService = appConfig.memberService();
+        //      OrderService orderService = appConfig.orderService();
 
 
         ApplicationContext applicationContext = new AnnotationConfigApplicationContext(AppConfig.class);
@@ -32,6 +32,6 @@ public class OrderApp {
         Order order = orderService.createOrder(memberId, "itemA", 200000);
 
         System.out.println("order =" + order);
-        System.out.println("order.calculatorPrice = "+order.calculaterPrice());
+        System.out.println("order.calculatorPrice = " + order.calculaterPrice());
     }
 }
