@@ -1,6 +1,6 @@
 # Spring_ToyProject
 ***
-### 라이브러리
+### 사용 라이브러리
 - [JUnit📄](https://junit.org/junit5/docs/current/user-guide/#writing-tests-annotations)
 
 
@@ -8,6 +8,9 @@
 
 
 ***
+
+# 공부 및 개발 일지    
+
 
 ## Spring 프레임워크.
 
